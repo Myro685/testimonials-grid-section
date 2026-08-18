@@ -1,0 +1,136 @@
+:root {
+  --purple50: hsl(260, 100%, 95%);
+  --purple300: hsl(264, 82%, 80%);
+  --purple500: hsl(263, 55%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --grey100: hsl(214, 17%, 92%);
+  --grey200: hsl(0, 0%, 81%);
+  --grey400: hsl(224, 10%, 45%);
+  --grey500: hsl(217, 19%, 35%);
+  --darkBlue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+}
+
+.first {
+  background-color: var(--purple500);
+  color: var(--white);
+}
+.second {
+  background-color: var(--grey500);
+  color: var(--white);
+}
+.third {
+  background-color: var(--white);
+  color: var(--grey500);
+}
+.fourth {
+  background-color: var(--darkBlue);
+  color: var(--white);
+}
+.fifth {
+  background-color: var(--white);
+  color: var(--grey400);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+}
+
+.attribution { 
+  font-size: 0.6875rem; 
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+body {
+  background-color: var(--grey100);
+}
+
+main {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  article {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.5);
+
+    section {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      
+      img {
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid var(--grey100);
+      }
+
+      p {
+        font-weight: 600;
+        span {
+          font-weight: 500;
+          font-size: .8rem;
+        }
+      }
+    }
+
+    h2 {
+      margin: 2rem 0;
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .quotes {
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 5rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .first {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .second {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .third {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .fourth {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+  }
+
+  .fifth {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}
